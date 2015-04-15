@@ -87,408 +87,136 @@ _**Note:** Be sure to change `YOURDOMAIN.com`_
 
 ```json
 {
-  "swagger": "2.0",
-  "info": {
-    "version": "",
-    "title": "WPKBA Query API",
-    "description": "List and/or search KB articles.",
-    "license": {
-      "name": "MIT",
-      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
-    }
-  },
-  "host": "wpkbarticles.com",
-  "basePath": "/wp-kb-articles/api/v1",
-  "securityDefinitions": {},
-  "schemes": [
-    "http"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
-  "paths": {
-    "/query": {
-      "post": {
-        "description": "List and/or search KB articles.",
-        "tags": [
-          "WPKBA Query"
-        ],
-        "operationId": "Query",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "callback",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "description": "For JSONP requests only. This should be the name of a JavaScript callback function."
-          },
-          {
-            "name": "wp_kb_articles[query_api][page]",
-            "in": "form",
-            "required": true,
-            "type": "integer",
-            "format": "int64",
-            "description": "Page number to retrieve results for.",
-            "default": "1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "schema": {
-              "$ref": "#/definitions/response"
+    "results": [
+        {
+            "id": 312,
+            "title": "Setting up Two Membership Types (Professional / Student) with Two Sub-Types (Gold / Bronze) and a 3-Day Free Trial",
+            "url": "http://wordpress.vm/kb-article/setting-up-two-membership-types-professional-student-with-two-sub-types-gold-bronze-and-a-3-day-free-trial",
+            "snippet": "with Gold and Bronze sub-types. I want to offer a free 3-day trial during which each account type will h",
+            "relevance": 2,
+            "hearts": 0,
+            "visits": 0,
+            "views": 0,
+            "last_view_time": 0,
+            "time": 1428578662,
+            "author": {
+                "id": 1,
+                "login": "jaswsinc",
+                "nicename": "jaswsinc",
+                "nickname": "jasnick",
+                "first_name": "Jason",
+                "last_name": "Caldwell",
+                "display_name": "Caldwell Jason"
             },
-            "description": ""
-          },
-          "400": {
-            "description": "Bad Request"
-          }
+            "categories": [
+                {
+                    "id": 52,
+                    "slug": "tutorials",
+                    "name": "tutorials"
+                }
+            ],
+            "tags": [
+                {
+                    "id": 72,
+                    "slug": "business-models",
+                    "name": "business-models"
+                },
+                {
+                    "id": 41,
+                    "slug": "custom-capabilities",
+                    "name": "custom-capabilities"
+                },
+                {
+                    "id": 5,
+                    "slug": "pro-forms",
+                    "name": "pro-forms"
+                },
+                {
+                    "id": 37,
+                    "slug": "restriction-options",
+                    "name": "restriction-options"
+                }
+            ]
         },
-        "security": {}
-      }
-    }
-  },
-  "definitions": {
-    "response": {
-      "required": [
-        "results",
-        "args",
-        "pagination"
-      ],
-      "title": "response",
-      "type": "object",
-      "properties": {
-        "results": {
-          "Type": "array",
-          "Description": "Array of all results; i.e., KB articles.",
-          "Items": {
-            "$ref": "#/definitions/result"
-          }
-        },
-        "args": {
-          "$ref": "#/definitions/args",
-          "Description": "Based on input parameters; this is a list of parsed/validated arguments that were used to satisfy the request."
-        },
-        "pagination": {
-          "$ref": "#/definitions/pagination",
-          "Description": "Pagination-related properties; e.g., total_results, per_page, current_page, etc."
+        {
+            "id": 202,
+            "title": "Can a Free Subscriber register more than once?",
+            "url": "http://wordpress.vm/kb-article/can-a-free-subscriber-register-more-than-once",
+            "snippet": "ot be able to \"re-register\" for another free account using an email address that matches their",
+            "relevance": 2,
+            "hearts": 0,
+            "visits": 0,
+            "views": 0,
+            "last_view_time": 0,
+            "time": 1428578044,
+            "author": {
+                "id": 1,
+                "login": "jaswsinc",
+                "nicename": "jaswsinc",
+                "nickname": "jasnick",
+                "first_name": "Jason",
+                "last_name": "Caldwell",
+                "display_name": "Caldwell Jason"
+            },
+            "categories": [
+                {
+                    "id": 4,
+                    "slug": "questions",
+                    "name": "questions"
+                }
+            ],
+            "tags": [
+                {
+                    "id": 7,
+                    "slug": "login-registration",
+                    "name": "login-registration"
+                },
+                {
+                    "id": 5,
+                    "slug": "pro-forms",
+                    "name": "pro-forms"
+                }
+            ]
         }
-      },
-      "description": "Full response object model."
+    ],
+    "args": {
+        "page": 1,
+        "per_page": 2,
+        "orderby": {
+            "relevance": "DESC",
+            "popularity": "DESC",
+            "visits": "DESC",
+            "comment_count": "DESC",
+            "views": "DESC",
+            "date": "DESC"
+        },
+        "author": [],
+        "category": [],
+        "category_no_tp": [],
+        "tag": [],
+        "q": "free",
+        "trending_days": 7,
+        "snippet_size": 100,
+        "strings": {
+            "page": "1",
+            "per_page": "2",
+            "orderby": "relevance:DESC,popularity:DESC,visits:DESC,comment_count:DESC,views:DESC,date:DESC",
+            "author": "",
+            "category": "",
+            "category_no_tp": "",
+            "tag": "",
+            "q": "free",
+            "trending_days": "7",
+            "snippet_size": "100",
+            "expand": "true"
+        },
+        "expand": true
     },
     "pagination": {
-      "required": [
-        "total_results",
-        "total_pages",
-        "per_page",
-        "current_page"
-      ],
-      "title": "pagination",
-      "type": "object",
-      "properties": {
-        "total_results": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Total results available."
-        },
-        "total_pages": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Total pages available."
-        },
-        "per_page": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Results per page."
-        },
-        "current_page": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "The current page."
-        }
-      },
-      "description": "Pagination-related properties; e.g., total_results, per_page, current_page, etc."
-    },
-    "result": {
-      "required": [
-        "id",
-        "title",
-        "url",
-        "snippet",
-        "relevance",
-        "hearts",
-        "visits",
-        "views",
-        "last_view_time",
-        "time",
-        "author",
-        "categories",
-        "tags"
-      ],
-      "title": "result",
-      "type": "object",
-      "properties": {
-        "id": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "KB article ID in WordPress."
-        },
-        "title": {
-          "Type": "string",
-          "Description": "KB article title."
-        },
-        "url": {
-          "Type": "string",
-          "Description": "KB article URL."
-        },
-        "snippet": {
-          "Type": "string",
-          "Description": "A contextual snippet. Filled only when a search was performed."
-        },
-        "relevance": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "A relevance score. Filled only when a search is performed."
-        },
-        "hearts": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Popularity; i.e., the total number of hearts the article has."
-        },
-        "visits": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Total number of unique visitors."
-        },
-        "views": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Total pageviews; i.e., hits."
-        },
-        "last_view_time": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "UTC timestamp indicating last view time. This is 0 if never viewed."
-        },
-        "time": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Publish date, expressed as UTC timestamp."
-        },
-        "author": {
-          "$ref": "#/definitions/author",
-          "Description": "Article author-related properties."
-        },
-        "categories": {
-          "Type": "array",
-          "Description": "An array of all categories the article is in.",
-          "Items": {
-            "$ref": "#/definitions/category"
-          }
-        },
-        "tags": {
-          "Type": "array",
-          "Description": "An array of all tags the article has.",
-          "Items": {
-            "$ref": "#/definitions/tag"
-          }
-        }
-      },
-      "description": "A result object."
-    },
-    "author": {
-      "required": [
-        "id",
-        "login",
-        "nicename",
-        "nickname",
-        "first_name",
-        "last_name",
-        "display_name"
-      ],
-      "title": "author",
-      "type": "object",
-      "properties": {
-        "id": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "WordPress user ID."
-        },
-        "login": {
-          "Type": "string",
-          "Description": "WordPress username."
-        },
-        "nicename": {
-          "Type": "string",
-          "Description": "WordPress nicename."
-        },
-        "nickname": {
-          "Type": "string",
-          "Description": "WordPress nickname."
-        },
-        "first_name": {
-          "Type": "string",
-          "Description": "First name."
-        },
-        "last_name": {
-          "Type": "string",
-          "Description": "Last name."
-        },
-        "display_name": {
-          "Type": "string",
-          "Description": "Display name."
-        }
-      },
-      "description": "Author object model."
-    },
-    "category": {
-      "required": [
-        "id",
-        "slug",
-        "name"
-      ],
-      "title": "category",
-      "type": "object",
-      "properties": {
-        "id": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Category term ID in WordPress."
-        },
-        "slug": {
-          "Type": "string",
-          "Description": "Category slug/identifier."
-        },
-        "name": {
-          "Type": "string",
-          "Description": "Category name/label."
-        }
-      },
-      "description": "Category object model."
-    },
-    "tag": {
-      "required": [
-        "id",
-        "slug",
-        "name"
-      ],
-      "title": "tag",
-      "type": "object",
-      "properties": {
-        "id": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Tag term ID in WordPress."
-        },
-        "slug": {
-          "Type": "string",
-          "Description": "Tag slug/identifier."
-        },
-        "name": {
-          "Type": "string",
-          "Description": "Tag name/label."
-        }
-      },
-      "description": "Tag object model."
-    },
-    "args": {
-      "required": [
-        "page",
-        "per_page",
-        "orderby",
-        "author",
-        "category",
-        "category_no_tp",
-        "tag",
-        "q",
-        "trending_days",
-        "snippet_size",
-        "expand"
-      ],
-      "title": "args",
-      "type": "object",
-      "properties": {
-        "page": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Current page number.",
-          "Default": "1"
-        },
-        "per_page": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "Number of results per page.",
-          "Default": "25"
-        },
-        "orderby": {
-          "Type": "object",
-          "Description": "Associative orderby object. Property names correlate with data columns, and each value is either ASC or DESC.",
-          "Default": "relevance:DESC,popularity:DESC,visits:DESC,comment_count:DESC,views:DESC,date:DESC"
-        },
-        "author": {
-          "Type": "array",
-          "Description": "If filtered by author, an array of those author IDs.",
-          "Items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "category": {
-          "Type": "array",
-          "Description": "If filtered by category, an array of those category IDs.",
-          "Items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "category_no_tp": {
-          "Type": "array",
-          "Description": "If filtered by category, an array of those category IDs; minus trending/popular categories which are considered special in the WPKBA plugin for WordPress.",
-          "Items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "tag": {
-          "Type": "array",
-          "Description": "If filtered by tag, an array of those tag IDs.",
-          "Items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "q": {
-          "Type": "string",
-          "Description": "If searching, the search terms in the request."
-        },
-        "trending_days": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "The number of days used in a trending view timeframe.",
-          "Default": "7"
-        },
-        "snippet_size": {
-          "Type": "integer",
-          "Format": "int64",
-          "Description": "The length of each contextual snippet.",
-          "Default": "100"
-        },
-        "expand": {
-          "Type": "array",
-          "Description": "Boolean, string, or an array of strings.",
-          "Items": {
-            "type": "string"
-          },
-          "Default": "true"
-        }
-      },
-      "description": "Based on input parameters; this is a list of parsed/validated arguments that were used to satisfy the request."
+        "total_results": 30,
+        "total_pages": 15,
+        "per_page": 2,
+        "current_page": 1
     }
-  }
 }
 ```
