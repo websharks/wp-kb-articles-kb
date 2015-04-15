@@ -41,9 +41,9 @@ _**Note:** Be sure to change `YOURDOMAIN.com`_
   ```text
   relevance:DESC,popularity:DESC,visits:DESC,comment_count:DESC,views:DESC,date:DESC
   ```
-  Each item in the list should contain `column:[ASC|DESC]`.
+  Each item in the list should contain `column:[ASC|DESC]`
 
-  _Note: If you pass an associative array, the column name is the array key, and the value for that key is either `ASC` or `DESC`_
+  _Note: If you pass an associative array, the column name is the array key, and the value for that key is either `ASC` or `DESC`._
 
 - `author` (string|integer|array) - Optional author filter. This can be a comma-delimited list of author usernames and/or author IDs. Or, instead of passing a comma-delimited list, you can pass an array of author usernames and/or IDs.
 
