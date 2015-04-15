@@ -23,7 +23,7 @@ _**Note:** Be sure to change `YOURDOMAIN.com`_
 
 ## Query API Code Samples
 
-<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/websharks/wp-kb-articles-kb/master/query-api.har.json&targets=all" frameborder="0" scrolling="no" width="100%" height="575px" seamless></iframe>
+<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/websharks/wp-kb-articles-kb/master/query-api.har.json&targets=all&default-target=php:curl" frameborder="0" scrolling="no" width="100%" height="575px" seamless></iframe>
 
 ---
 
