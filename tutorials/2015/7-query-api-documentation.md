@@ -220,3 +220,9 @@ _**Note:** Be sure to change `YOURDOMAIN.com`_
     }
 }
 ```
+
+---
+
+## JSONP Callback Handler
+
+If you'd like to use the API with a JSONP callback, you can pass `?callback=yourCallback` in the query string.
