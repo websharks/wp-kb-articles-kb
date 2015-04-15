@@ -4,6 +4,7 @@ categories: tutorials
 tags: github-integration, yaml-front-matter
 author: jaswsinc
 github-issue: https://github.com/websharks/wp-kb-articles-kb/issues/8
+toc-enable: false
 ---
 
 ```yaml
