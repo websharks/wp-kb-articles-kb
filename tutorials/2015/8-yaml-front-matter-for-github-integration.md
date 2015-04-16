@@ -7,9 +7,8 @@ github-issue: https://github.com/websharks/wp-kb-articles-kb/issues/8
 toc-enable: false
 ---
 
-`---`
-
-```yaml
+```text
+---
 slug: 'quick-example' # (default value is based on repo file path minus extension)
 title: 'A Quick Example KB Article' # (default value is pulled from article body)
 
@@ -36,9 +35,8 @@ hids-enable: 'true|false' # (defaults to config. option in the Dashboard)
 
 toc-enable: 'true|false' # (defaults to config. option in the Dashboard)
 # NOTE: this enables|disables an auto-generated Table of Contents.
+---
 ```
-
-`---`
 
 When WP KB Articles pulls an article from your repo into WordPress for the first time, it will use the YAML Front Matter you provide at the top of the article, encapsulated by separators `---` `---` on their own line as seen above. Default values (as detailed above) will be used for any details that you do not define explicitly in the YAML Front Matter.
 
