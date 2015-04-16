@@ -7,7 +7,7 @@ github-issue: https://github.com/websharks/wp-kb-articles-kb/issues/8
 toc-enable: false
 ---
 
-```text
+```bash
 ---
 slug: 'quick-example' # (default value is based on repo file path minus extension)
 title: 'A Quick Example KB Article' # (default value is pulled from article body)
