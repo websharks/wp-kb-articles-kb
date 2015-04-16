@@ -10,31 +10,31 @@ toc-enable: false
 `---`
 
 ```yaml
-slug: quick-example # (default value is based on repo file path minus extension)
-title: A Quick Example KB Article (default value is pulled from article body)
+slug: 'quick-example' # (default value is based on repo file path minus extension)
+title: 'A Quick Example KB Article' # (default value is pulled from article body)
 
-categories: cat-slug1, cat-slug2, 3, 4 # (slugs or IDs; default is no categories)
-tags: tag-slug1, tag-slug2, 3, 4 # (slugs or IDs; default is no tags)
+categories: 'cat-slug1, cat-slug2, 3, 4' # (slugs or IDs; default is no categories)
+tags: 'tag-slug1, tag-slug2, 3, 4' # (slugs or IDs; default is no tags)
 
-author: username|ID # (defaults to a user configured in Dashboard for KB articles)
-status: draft|pending|pending-via-github|future|publish # (defaults to pending-via-github)
-pubdate: strtotime compatible # (defaults to `now`)
+author: 'username|ID' # (defaults to a user configured in Dashboard for KB articles)
+status: 'draft|pending|pending-via-github|future|publish' # (defaults to pending-via-github)
+pubdate: 'strtotime compatible' # (defaults to `now`)
 
-excerpt: short description/summary # (default is empty)
+excerpt: 'short description/summary' # (default is empty)
 
-comment-status: open|closed # (default based on blog config)
-ping-status: open|closed # (default based on blog config)
+comment-status: 'open|closed' # (default based on blog config)
+ping-status: 'open|closed' # (default based on blog config)
 
-github-issue: 1|owner/repo#1|URL leading to an issue
+github-issue: '1|owner/repo#1|URL leading to an issue'
 # NOTE: this can be `github-issue: ` or just `issue:`.
 
-link-images: true|false # (defaults to config. option in the Dashboard)
+link-images: 'true|false' # (defaults to config. option in the Dashboard)
 # NOTE: this enables|disables automatic image links; i.e., click to enlarge.
 
-hids-enable: true|false # (defaults to config. option in the Dashboard)
+hids-enable: 'true|false' # (defaults to config. option in the Dashboard)
 # NOTE: this enables|disables auto-generated heading ID anchors.
 
-toc-enable: true|false # (defaults to config. option in the Dashboard)
+toc-enable: 'true|false' # (defaults to config. option in the Dashboard)
 # NOTE: this enables|disables an auto-generated Table of Contents.
 ```
 
